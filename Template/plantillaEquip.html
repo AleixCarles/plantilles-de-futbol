@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <meta charset="UTF-8">
+<title>Equips</title>
+</head>
+<body>
+  <h1 style="text-align: center">{{ equip[0].nombreEquipo }}</h1>
+  <table class="table">
+    <thead class="table-dark">
+      <td>Nombre</td>
+      <td>Posicio</td>
+      <td>Naixement</td>
+      <td>Altura</td>
+      <td>Valor del mercat</td>
+    </thead>
+{% for jugador in equip %}
+    <tr>
+      <td>{{jugador.get('nombre')}}</td>
+      <td>{{jugador.get('posicion')}}</td>
+      <td>{{jugador.get('nacimiento')}}</td>
+      <td>{{jugador.get('altura')}}</td>
+      <td>{{jugador.get('valorMercado')}}</td>
+    </tr>
+{% endfor %}
+  </table>
+</body>
+</html>
